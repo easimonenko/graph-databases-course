@@ -1,0 +1,138 @@
+% slides-about-course.tex
+% About course
+% Language: Russian
+% Author: Evgeny Simonenko <easimonenko@mail.ru>
+% License: CC BY-ND 4.0
+
+\documentclass[11pt]{beamer}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}
+\setmainfont{FreeSerif}
+\setsansfont{FreeSans}
+\setmonofont[SizeFeatures={Size=10}]{FreeMono}
+
+\title[Графовые СУБД]{Графовые базы данных}
+\subtitle{О курсе}
+\author[]{Симоненко Евгений}
+\institute[]{Университет ИТМО}
+\date[]{Санкт-Петербург, 2022}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Содержание}
+  \tableofcontents
+\end{frame}
+
+\section{Об авторе курса}
+
+\begin{frame}
+  \frametitle{Об авторе курса}
+  \begin{itemize}
+  \item Изучает научную коммуникацию в Университете ИТМО
+  \item В интересах (кроме графовых баз данных):
+    \begin{itemize}
+    \item GNU Emacs, Lisp, Scheme
+    \item Haskell, Erlang, Standard ML
+    \item Linux, NetBSD
+    \item Embedded Systems, Robotics
+    \end{itemize}
+  \item По образованию математик
+  \item По профессии программист и преподаватель
+  \item Пишет на Хабре \url{https://habr.com/ru/users/easimonenko/posts/}
+  \item Ведёт свой блог \url{https://easimonenko.github.io/}
+  \end{itemize}
+\end{frame}
+
+\section{О курсе}
+
+\begin{frame}
+  \frametitle{О чём этот курс}
+  \begin{itemize}
+  \item Обсудим графовую модель данных и её отличия от реляционной.
+  \item Посмотрим на ассортимент графовых СУБД.
+  \item Установим, настроим, запустим и попробуем Neo4j.
+  \item Научимся создавать и редактировать графы на языке Cypher.
+  \item Научимся писать запросы к графам на языке Cypher.
+  \item Узнаем как разрабатывать приложения Neo4j примере Node.js.
+  \end{itemize}
+\end{frame}
+
+\section{Как проходят занятия}
+
+\begin{frame}
+  \frametitle{Как проходят занятия}
+  \begin{itemize}
+  \item Слушаем и обсуждаем
+  \item Пробуем и тренеруемся
+  \item Делимся опытом, задаём вопросы
+  \item Между занятиями делаем зачётное задание
+  \end{itemize}
+\end{frame}
+
+\section{Финальное задание}
+
+\begin{frame}
+  \frametitle{Финальное задание}
+  На выбор один из нескольких вариантов:
+  \begin{itemize}
+  \item Подобрать предметную область, создать для неё графовую модель,
+    подготовить пример набора данных, создать на его основе граф в СУБД Neo4j,
+    провести анализ полученного графа.
+  \item Изучить альтернативную графовую СУБД, рассмотреть вопросы из данного курса
+    (администрирование, интерфейс пользователя, язык запросов, возможности).
+  \item Внедрить в свой программный проект графовую СУБД (в качестве основной СУБД
+    или для решения специфических задач).
+  \item Изучить программный интерфейс к графовой СУБД для выбранного языка
+    программирования (изучить все основные аспекты, такие как подключение к СУБД,
+    отправка запросов, расшифровка ответов).
+  \end{itemize}
+  Возможны также различные сочетания предложенных вариантов.
+\end{frame}
+
+\begin{frame}
+  \frametitle{Финальное задание}
+  Порядок сдачи зачёта:
+  \begin{itemize}
+  \item Сделать выбор варианта задания.
+  \item Собрать и изучить необходимую информацию.
+  \item Поработать над выбранным вариантом.
+  \item Предоставить артефакты выполненного задания.
+  \item Получить обратную связь.
+  \item Получить зачёт.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Что почитать}
+  \begin{itemize}
+  \item Робинсон Я., Эифрем Э., Вебер Дж. Графовые базы данных. Новые возможности
+    для работы. -- Пер. с англ. -- М.: ДМК-Пресс, 2016. -- 256 с.
+  \item Эрик, Р. Семь баз данных за семь недель. Введение в современные базы данных
+    и идеологию NoSQL. -- Пер. с англ. -- М.: ДМК Пресс, 2013. — 384 с.
+  \end{itemize}
+\end{frame}
+
+\section*{Благодарность}
+
+\begin{frame}
+  \center
+  \textit{Благодарю за внимание!}
+  
+  \textbf{\textsl{\inserttitle}}
+
+  \insertauthor
+
+  \url{mailto:easimonenko@mail.ru}
+
+  \insertinstitute
+\end{frame}
+
+\end{document}
