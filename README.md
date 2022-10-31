@@ -18,6 +18,8 @@ _Здесь будут слайды и другие материалы курс�
 ### Слайды
 
 - О курсе: [PDF](slides-about-course.pdf) | [LaTeX](slides-about-course.tex)
+- Графовая модель данных: [PDF](slides-graph-data-model.pdf) | [LaTeX](slides-graph-data-model.tex)
+- Обзор графовых СУБД: [PDF](slides-graph-dbms-review.pdf) | [LaTeX](slides-graph-dbms-review.tex)
 
 ### Материалы для изучения
 

@@ -1,0 +1,166 @@
+% slides-graph-data-model.tex
+% Graph Data Model
+% Language: Russian
+% Author: Evgeny Simonenko <easimonenko@mail.ru>
+% License: CC BY-ND 4.0
+
+\documentclass[11pt]{beamer}
+
+\usepackage{polyglossia}
+\setdefaultlanguage{russian}
+\setotherlanguage{english}
+\defaultfontfeatures{Ligatures={TeX},Renderer=Basic}
+\setmainfont{FreeSerif}
+\setsansfont{FreeSans}
+\setmonofont[SizeFeatures={Size=10}]{FreeMono}
+
+\title[Графовые СУБД]{Графовые базы данных}
+\subtitle{Графовая модель данных}
+\author[]{Симоненко Евгений}
+\institute[]{Университет ИТМО}
+\date[]{Санкт-Петербург, 2022}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}
+  \frametitle{Содержание}
+  \tableofcontents
+\end{frame}
+
+\section{Модельный пример}
+
+\begin{frame}
+  \frametitle{Модельный пример}
+  \begin{itemize}
+  \item Вася дружит с Петей
+  \item Петя подписан на Любу
+  \item Люба слушает Анюту
+  \item Анюта замужем за Лёшей
+  \item Лёша живёт в Питере
+  \item Вася учится в ИТМО
+  \item Петя родился в Мичуринске
+  \item Люба работает Кунсткамере
+  \item ...
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Сущности модельного примера}
+  \begin{itemize}
+  \item \emph{Люди} (имеют имя, дату рождения):
+    \begin{itemize}
+    \item Вася
+    \item Петя
+    \item Люба
+    \item Анюта
+    \item Лёша
+    \end{itemize}
+  \item \emph{Города} (имеют название, местоположение, год основания):
+    \begin{itemize}
+    \item Питер
+    \item Мичуринск
+    \end{itemize}
+  \item \emph{Место учёбы} (имеют название, местоположение, год основания):
+    \begin{itemize}
+    \item ИТМО
+    \end{itemize}
+  \item \emph{Место работы} (имеют название, местоположение, год основания):
+    \begin{itemize}
+    \item Кунсткамера
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}
+  \frametitle{Отношения между сущностями}
+  \begin{itemize}
+  \item дружит c (друг)
+  \item подписан на (следит за)
+  \item слушает
+  \item замужем за / женат на
+  \item живёт в
+  \item учится в
+  \item родился в
+  \item работает в
+  \end{itemize}
+\end{frame}
+
+\section{Реляционная модель}
+
+\begin{frame}
+  \frametitle{Реляционная модель}
+  Таблицы (списки кортежей):
+  \begin{itemize}
+  \item Люди (Peoples)
+  \item Города (Cities) (оно же Место рождения (BirthPlace))
+  \item Место работы (Workplace)
+  \item Место учёбы (StudyPlace)
+  \item Дружит с (FriendsWith)
+  \item Подписан на (Following)
+  \item Слушает (ListeningTo)
+  \item Замужем за / женат на (MarriedTo)
+  \item Живёт в (LivingIn)
+  \item Учится в (StudiesIn)
+  \item Родился в (BornIn)
+  \item Работает в (WorksIn)
+  \end{itemize}
+\end{frame}
+
+\section{Графовая модель}
+
+\begin{frame}
+  \frametitle{Графовая модель}
+  \begin{itemize}
+  \item Узлы (Nodes): предсталяют сущности. Могут хранить любые данные сущностей.
+  \item Отношения (Relationships): представляют связи между узлами.
+    Могут связывать любые сущности, и тоже хранить данные.
+  \end{itemize}
+  Например, Вася учится в ИТМО. Есть два узла: Вася и ИТМО. У узла Вася есть данные
+  о его дате рождения, а у узла ИТМО есть данные о дате его основания.
+  И есть связь между Васей и ИТМО, хранящая время обучения Васи в ИТМО.
+\end{frame}
+
+\section{Графовая модель vs Реляционная модель}
+
+\begin{frame}
+  \frametitle{Графовая модель vs Реляционная модель}
+  \begin{itemize}
+  \item В реляционной для каждого класса сущностей нужна отдельная таблица.
+  \item В графовой сущности являются узлами, структура данных которых заранее не определяется.
+  \item В реляционной для связей между сущностями используются ключи и вспомогательные таблицы
+    (в пределе для каждого класса связей создаётся отдельная таблица).
+  \item В графовой связи никак не классифицируются.
+  \end{itemize}
+\end{frame}
+
+\section{Задание}
+
+\begin{frame}
+  \frametitle{Задание}
+  \begin{itemize}
+  \item Выделите в своей предметной области классы сущностей и классы отношений между ними.
+  \item Подготовьте модельный пример.
+  \item Смоделируйте его с помощью реляционного и графового подходов.
+  \end{itemize}
+\end{frame}
+
+\section*{Благодарность}
+
+\begin{frame}
+  \center
+  \textit{Благодарю за внимание!}
+  
+  \textbf{\textsl{\inserttitle}}
+
+  \insertauthor
+
+  \url{mailto:easimonenko@mail.ru}
+
+  \insertinstitute
+\end{frame}
+
+\end{document}
